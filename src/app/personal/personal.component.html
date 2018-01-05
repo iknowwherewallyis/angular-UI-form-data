@@ -1,0 +1,14 @@
+<form #personalForm="ngForm">
+  <div>
+   <img [src]="image" height="150px" width="250px" align="left">
+ </div>
+ <br>
+ <div>
+   <label class="control-label" for="firstname">First Name</label>
+   <input id="firstname" name="firstname" type="text" placeholder="First Name" [(ngModel)]="personal.firstName" required="true" validatorMessage="please enter a value">
+   <label class="control-label" for="lastname">Last Name</label>
+   <input id="lastname" name="lastname" type="text" placeholder="Last Name" [(ngModel)]="personal.lastName" required>
+        <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+ </div>
+
+</form>

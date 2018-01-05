@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
+import { FormDataServiceService } from './data/form-data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  image = 'form-data/src/assets/assets/image/ericsson_logo.png';
+
+
+@Input() formData;
+
+    constructor(private formDataService: FormDataServiceService) {
+    }
+
+    ngOnInit() {
+        this.formData = this.formDataService.getFormData();
+        console.log(this.title + ' loaded!');
+    }
 }
