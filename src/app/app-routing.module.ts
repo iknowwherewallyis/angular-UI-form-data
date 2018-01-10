@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule }             from '@angular/core';
+import { CommonModule }         from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PersonalComponent } from './personal/personal.component';
-import { SuccessComponent } from './success/success.component';
+import { PersonalComponent }    from './personal/personal.component';
+import { SuccessComponent }     from './success/success.component';
 
 
 export const appRoutes: Routes = [

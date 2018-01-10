@@ -1,16 +1,25 @@
 export class FormData {
-    firstName: string = '';
-    lastName : string = '';
+  username: string = '';
+  password : string = '';
 
-    clear() {
-        this.firstName = '';
-        this.lastName = '' ;
-    }
+  vm_name  : string = '';
+  vm_image : string = '';
+
+  clear() {
+    this.username = '';
+    this.password  = '';
+
+    this.vm_name   = '';
+    this.vm_image  = '';
+  }
 }
- 
+
 export class Personal {
-    firstName: string = '';
-    lastName : string = '';
+  username: string = '';
+  password : string = '';
 }
- 
 
+export class Success {
+  vm_name : string = '';
+  vm_image: string = '';
+}

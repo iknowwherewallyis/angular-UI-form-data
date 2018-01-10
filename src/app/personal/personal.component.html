@@ -1,8 +1,10 @@
+
+<!--
 <form #personalForm="ngForm">
   <div>
    <img [src]="image" height="150px" width="250px" align="left">
  </div>
- <br>
+ <br />
  <div>
    <label class="control-label" for="firstname">First Name</label>
    <input id="firstname" name="firstname" type="text" placeholder="First Name" [(ngModel)]="personal.firstName" required="true" validatorMessage="please enter a value">
@@ -11,4 +13,30 @@
         <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
  </div>
 
+</form>
+-->
+
+<!--<div>
+ <img [src]="image" height="150px" width="250px" align="left">
+</div>-->
+<form class="form-horizontal" #personalForm="ngForm">
+ <br />
+  <div class="form-group row">
+    <label for="username" class="control-label col-sm-2 col-form-label">Username:</label>
+    <div class="col-sm-2">
+      <input type="username" class="form-control" id="username" name="username" placeholder="Enter Username" [(ngModel)]="personal.username" required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="control-label col-sm-2 col-form-label">Password:</label>
+    <div class="col-sm-2">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" [(ngModel)]="personal.password" required="true">
+    </div>
+  </div>
+  <br />
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-2">
+      <button type="submit" class="btn btn-success btn-outline-rounded btn-info" [disabled]="!personalForm.valid" (click)="goToNext(personalForm)">Sign in<span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+    </div>
+  </div>
 </form>

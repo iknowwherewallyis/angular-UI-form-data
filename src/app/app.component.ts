@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input  }      from '@angular/core';
 import { FormDataServiceService } from './data/form-data-service.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormDataServiceService } from './data/form-data-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Angular-Bootstrap App';
   image = 'form-data/src/assets/assets/image/ericsson_logo.png';
 
 

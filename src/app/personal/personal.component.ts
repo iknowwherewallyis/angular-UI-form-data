@@ -1,8 +1,8 @@
-import { Component, OnInit }   from '@angular/core';
-import { Router }              from '@angular/router';
+import { Component, OnInit }      from '@angular/core';
+import { Router }                 from '@angular/router';
 
-import { Personal }            from '../data/formData.model';
-import { FormDataServiceService }     from '../data/form-data-service.service';
+import { Personal }               from '../data/formData.model';
+import { FormDataServiceService } from '../data/form-data-service.service';
 
 @Component({
   selector: 'app-personal',
@@ -15,8 +15,8 @@ export class PersonalComponent implements OnInit {
     personal: Personal;
     form: any;
     image = '../assets/image/ericsson_logo.png';
-    firstName = "John";
-    lastName = "Handy";
+    username = "admin";
+    password = "admin";
 
     constructor(private router: Router,private formDataService: FormDataServiceService) {
     }
@@ -27,7 +27,7 @@ export class PersonalComponent implements OnInit {
     }
 
     validateUserInput() {
-        if (this.firstName == this.personal.firstName && this.lastName == this.personal.lastName){
+        if (this.username == this.personal.username && this.password == this.personal.password){
         return true;
         }  return false;
     }
@@ -42,13 +42,10 @@ export class PersonalComponent implements OnInit {
         }
     }
 
-
     goToNext(form: any) {
         if (this.save(form)) {
         this.router.navigate(['/success']);
         }
     }
-
-
 
 }
